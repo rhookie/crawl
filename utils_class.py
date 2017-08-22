@@ -160,7 +160,7 @@ class BrowserRender(QWebView):
     
     def text(self,pattern,value):
         frame=self.page().mainFrame()
-        frame.evaluateJavaScript("document.getElementById('page_size').options[1].text='1000'")
+        frame.evaluateJavaScript("document.getElementById('%s').options[1].text='%s'"%(pattern,value))
 #         for e in self.find(pattern):
 #             e.setPlainText(value)
     
